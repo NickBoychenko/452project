@@ -44,6 +44,6 @@ if __name__ == "__main__":
     vertices, edges = read_graph()
     min_cover = find_min_vertex_cover_permutation(vertices, edges)
     if min_cover is not None:
-        print("Minimum Vertex Cover:", " ".join(sorted(min_cover)))
+        print("Minimum Vertex Cover:", " ".join(min_cover))
     else:
         print("No vertex cover found.")
