@@ -23,20 +23,18 @@ def all_edges_covered(cover_set, edges):
 
 def find_min_vertex_cover_permutation(vertices, edges):
     best_cover = None
-    # Generate all permutations of vertices
-    for perm in permutations(vertices):
-        cover = set()
-        for v in perm:
-            cover.add(v)
-            if all_edges_covered(cover, edges):
-                # Check if this cover is better than the best found so far
-                if best_cover is None or len(cover) < len(best_cover):
+
+    for perm in permutations(vertices):     # Generate all permutations of vertices O(N!)
+        cover = set()   #O(1)
+        for v in perm:  # O(N)
+            cover.add(v)   # O(1)
+            if all_edges_covered(cover, edges):    # O(N)
+                if best_cover is None or len(cover) < len(best_cover): # Check if it's the best cover
                     best_cover = cover.copy()
-                # Once we found a cover for this permutation, we can break
-                # because continuing would only add more vertices and not be minimal for that permutation
+                
                 break
 
-        # If we found a cover of size 1 (the smallest possible) we can stop early
+        # If we found a cover of size 1 we can stop early
         if best_cover and len(best_cover) == 1:
             break
     return best_cover
