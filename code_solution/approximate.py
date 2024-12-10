@@ -1,4 +1,5 @@
 import sys
+import time
 
 def solve_vertex_cover():
     # O(m) --
@@ -33,4 +34,7 @@ def solve_vertex_cover():
 
 
 if __name__ == "__main__":
+    start_time = time.time()
     solve_vertex_cover()
+    end_time = time.time()
+    print(f"Time taken: {end_time - start_time:.6f} seconds")

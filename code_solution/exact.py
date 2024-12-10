@@ -1,4 +1,5 @@
 import sys
+import time
 from itertools import permutations
 
 def read_graph():
@@ -41,9 +42,14 @@ def find_min_vertex_cover_permutation(vertices, edges):
     return best_cover
 
 if __name__ == "__main__":
+    start_time = time.time()
     vertices, edges = read_graph()
     min_cover = find_min_vertex_cover_permutation(vertices, edges)
     if min_cover is not None:
         print("Minimum Vertex Cover:", " ".join(min_cover))
     else:
         print("No vertex cover found.")
+
+    end_time = time.time()
+
+    print(f"Time taken: {end_time - start_time:.6f} seconds")
