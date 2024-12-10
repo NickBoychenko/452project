@@ -1,0 +1,17 @@
+sample.txt
+Minimum Vertex Cover: b
+
+string.txt
+Minimum Vertex Cover: c a e g
+
+center.txt
+Minimum Vertex Cover: a
+
+bipartite.txt
+Minimum Vertex Cover: a1 a2 a3
+
+medium.txt
+Minimum Vertex Cover: e c i
+
+zlarge.txt
+Minimum Vertex Cover: a b c d e f g h i j k l m n o p q r
